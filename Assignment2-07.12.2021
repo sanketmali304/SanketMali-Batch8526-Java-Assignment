@@ -1,0 +1,48 @@
+Q1. Write a Java program to check whether two String objects contain the same data.  
+Sample Output:
+"Stephen Edwin King" equals "Walter Winchell"? false                                                          
+"Stephen Edwin King" equals "Mike Royko"? false
+Ans:
+package com;
+public class Q1 {
+public static void main(String[] args) {
+	String str1="Stephen Edwin King ";
+	String str2="Walter Winchell";
+	if(str1.equals(str2)==true)
+		System.out.println(str1+" equals "+str2+"?True");
+	else
+		System.out.println(str1+" equals "+str2+"?False");
+}
+}
+
+
+Q2. Write a Java program to compare a given string to another string, ignoring case considerations. 
+ Sample Output:
+"Stephen Edwin King" equals "Walter Winchell"? false                                                          
+"Stephen Edwin King" equals "stephen edwin king"? true 
+
+Q3. Write a Java program to get the index of all the characters of the alphabet.  
+Sample Output:
+a  b c  d e  f  g h i  j                                                                                     
+=========================                                                                                     
+36 10 7 40 2 16 42 1 6 20                                                                                     
+                                                                                                   
+k  l  m  n  o  p q  r  s  t                                                                                   
+===========================                                                                                   
+8 35 22 14 12 23 4 11 24 31                                                                                   
+
+u  v  w  x  y  z                                                                                              
+================                                                                                              
+5 27 13 18 38 37
+
+Q4. Write a Java program to get the length of a given string.  
+Sample Output:
+The string length of 'example.com' is: 11
+Ans:
+package com;
+public class Q4{
+public static void main(String[] args) {
+	String str="example.com";
+	System.out.println("The string length of "+str+" is:"+str.length());
+}
+}
