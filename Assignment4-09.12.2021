@@ -1,0 +1,235 @@
+1. Write a Java method to check whether a year (integer) entered by the user is a leap year or not. 
+Expected Output:
+Input a year: 2017                                                                        
+False
+Ans:
+package com;
+import java.util.Scanner;
+public class leapYear {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.print("Input a year:");
+		int year=sc.nextInt();
+		if(year%4==0)
+			{
+			System.out.println("True");
+			}
+		else
+			{
+			System.out.println("False");
+			}
+	}
+}
+
+2. Write a Java method to check whether a string is a valid password. 
+Password rules:
+A password must have at least ten characters.
+A password consists of only letters and digits.
+A password must contain at least two digits.
+
+Expected Output:
+1. A password must have at least eight characters.                                             
+2. A password consists of only letters and digits.                                         
+3. A password must contain at least two digits                                        
+Input a password (You are agreeing to the above Terms and Conditions.): abcd1234           
+Password is valid: abcd1234 
+Ans:
+package com;
+import java.util.Scanner;
+public class validPassword {
+	public static boolean checkPassword(String pass){	
+//	System.out.println(pass.length()+" 1st If");
+	if(pass.length()<8)return false;
+	int lcount=0;
+	int ncount=0;
+	for(int i=0;i<pass.length();i++)
+	{
+		char c=pass.charAt(i);
+		if( c>='a' && c<='z' || c>='A' && c<='Z')
+			lcount++;
+		if(c>='0' && c<='9')
+			ncount++;
+	}
+//	System.out.println(ncount+" 2nd If");
+	if(ncount<2)return false;
+//	System.out.printf("Hii"+(lcount+ncount)+" "+pass.length());
+	return (lcount+ncount)==pass.length();	
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+System.out.println("1. A password must have at least eight characters.\r\n"
+				+"2. A password consists of only letters and digits.\r\n"
+				+"3. A password must contain at least two digits .\r\n"
+				+"Input a password (You are agreeing to the above Terms and Conditions.):");
+		String pass=sc.nextLine();
+		
+		if(checkPassword(pass))
+			System.out.println("Password is valid:"+pass);
+		else
+			System.out.println("Password is Not valid:"+pass);
+	}
+}
+3. Write a Java program to convert temperature from Fahrenheit to Celsius degree.
+Test Data
+Input a degree in Fahrenheit: 212
+Expected Output:
+212.0 degree Fahrenheit is equal to 100.0 in Celsius
+Ans:
+package com;
+import java.util.Scanner;
+public class FahToCelsius {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Input a degree in Fahrenheit:");
+		float f=sc.nextFloat();
+		float cel=((f-32)*5/9);
+		System.out.println(f+" degree Fahrenheit is equal to "+cel+" in Celsius");
+	}
+}
+
+4. Write a Java program that reads a number in inches, converts it to meters. 
+Note: One inch is 0.0254 meter.
+Test Data
+Input a value for inch: 1000
+Expected Output :
+1000.0 inch is 25.4 meters
+Ans:
+package com;
+import java.util.Scanner;
+public class inchesTometers {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Input a value for inch:");
+		float i=sc.nextFloat();
+		double m=(i*0.0254);
+		System.out.println(i+" inch is "+m+" meters");	
+	}
+}
+
+5. Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer. 
+Test Data
+Input an integer between 0 and 1000: 565
+Expected Output :
+The sum of all digits in 565 is 16
+Ans:
+package com;
+import java.util.Scanner;
+public class addDigit{
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Input an integer between 0 and 1000:");
+		int n=sc.nextInt(),sum=0;
+		int a=n;
+		while(n>0)
+		{
+			sum+=(n%10);
+			n/=10;
+		}
+		System.out.println("The sum of all digits in "+a+" is "+sum);	
+	}
+}
+
+
+6. Write a Java program to convert minutes into a number of years and days. 
+Test Data
+Input the number of minutes: 3456789
+Expected Output :
+3456789 minutes is approximately 6 years and 210 days.
+Ans:
+package com;
+import java.util.Scanner;
+public class yearsAnddays {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int m=sc.nextInt();
+		int h=m/60;
+		int d=h/24;
+		int y=d/365;
+		int day=d%365;
+		System.out.println(m+" minutes is approximately "+y+" years and "+day+" days.");
+	}
+}
+
+7. Write a Java program that reads a number and display the square, cube, and fourth power. 
+Expected Output:
+Square: .2f
+Cube: .2f
+Fourth power: 50625.00
+
+8. Write a Java program to find the numbers greater than the average of the numbers of a given array. 
+Expected Output:
+Original Array:
+[1, 4, 17, 7, 25, 3, 100]
+The average of the said array is: 22.0
+The numbers in the said array that are greater than the average are:
+25
+100
+Ans:
+package com;
+public class AvgArray {
+public static void main(String[] args) {
+		int []arr= {1, 4, 17, 7, 25, 3, 100};
+		int sum=0;
+		System.out.print("Original Array:[");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+",");
+			sum+=arr[i];
+		}
+		System.out.print("]\n");
+		float avg=(sum/arr.length);
+		System.out.println("The average of the said array is:"+avg);
+		System.out.println("The numbers in the said array that are greater than the average are:");
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]>=avg)
+			{
+			System.out.println(arr[i]);
+			}
+		}	
+	}
+}
+
+
+9. Write a Java program that will accept an integer and convert it into a binary representation. Now count the number of bits which is equal to zero of the said binary representation. 
+Expected Output:
+Input first number: 25
+Binary representation of 25 is: 11001
+Number of zero bits: 2
+
+10. Write a Java program to move every positive number to the right and every negative number to the left of a given array of integers. 
+Expected Output:
+Original array: [-2, 3, 4, -1, -3, 1, 2, -4, 0]
+Result: [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+Ans:
+package com;
+public class Q10 {
+	public static void main(String[] args) {
+		int []arr= {-2, 3, 4, -1, -3, 1, 2, -4, 0};
+		System.out.print("Original Array:[");
+		for(int a:arr)
+		{
+			System.out.print(a+",");
+		}
+		System.out.print("]\n");
+		for(int i=0;i<arr.length-1;i++)
+		{
+			for(int j=i;j<arr.length;j++)
+			{
+			if(arr[i]>arr[j])
+				{
+				int temp=arr[j];
+				arr[j]=arr[i];
+				arr[i]=temp;
+				}
+			}
+		}
+		System.out.print("Result:[");
+		for(int a:arr)
+		{
+			System.out.print(a+",");
+		}
+		System.out.print("]");
+	}
+}
+
