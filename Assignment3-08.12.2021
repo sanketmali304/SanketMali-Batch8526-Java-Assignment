@@ -1,0 +1,83 @@
+1.	Write a Java program to join two array lists. 
+Ans:
+package com;
+import java.util.ArrayList;
+public class joinArray {
+public static void main(String[] args) {
+	ArrayList<String> list1 = new ArrayList<String>();
+	list1.add("Mumbai");
+	list1.add("Pune");
+	list1.add("Ahmednagar");
+	list1.add("Nashik");
+	System.out.println("ArrayList 1:"+ list1);
+	ArrayList<String> list2 = new ArrayList<String>();
+	list2.add("Maharashtra");
+	list2.add("India");
+	System.out.println("ArrayList 2:"+ list2);
+	list1.addAll(list2);
+	System.out.println("Join ArrayList:"+ list1);
+}
+}
+2.	Write a Java program to clone an array list to another array list.  
+Ans:
+package com;
+import java.util.ArrayList;
+public class cloneArraylist {
+	public static void main(String[] args) {
+		ArrayList<String> list1 = new ArrayList<String>();
+		list1.add("Mumbai");
+		list1.add("Pune");
+		list1.add("Ahmednagar");
+		list1.add("Nashik");
+		System.out.println("ArrayList:"+ list1);
+		
+		ArrayList list2 =(ArrayList)list1.clone();
+	    System.out.println("Clone ArrayList:"+list2);	
+	}
+}
+
+3.	Write a Java program to empty an array list.  
+Ans: 
+package com;
+import java.util.ArrayList;
+public class emptyArraylist {
+		public static void main(String[] args) {
+			ArrayList<String> list1 = new ArrayList<String>();
+			list1.add("Mumbai");
+			list1.add("Pune");
+			list1.add("Ahmednagar");
+			list1.add("Nashik");
+			System.out.println("ArrayList:"+ list1);
+		list1.removeAll(list1);
+		System.out.println("Empty ArrayList:"+list1);
+		}
+}
+
+4.	Write a Java program to test an array list is empty or not.  
+Ans:
+package com;
+import java.util.ArrayList;
+public class emptyOrNot{
+		public static void main(String[] args) {
+			ArrayList<String> list1 = new ArrayList<String>();
+			list1.add("Mumbai");
+			list1.add("Pune");
+			list1.add("Ahmednagar");
+			list1.add("Nashik");
+		System.out.println("ArrayList:"+ list1);
+		if(list1.isEmpty()==true)
+			System.out.println("Empty: True");
+		else
+			System.out.println("Empty: False");
+		}
+}
+
+
+5.  Write a Java program to trim the capacity of an array list the current list size. 
+6. Write a Java program to insert elements into the linked list at the first and last position.  
+7. Write a Java program to insert the specified element at the front of a linked list.  
+8. Write a Java program to insert the specified element at the end of a linked list. 
+
+9. Write a Java program to insert some elements at the specified position into a linked list.  
+10. Write a Java program to insert the specified element at the specified position in the linked list.  
+
