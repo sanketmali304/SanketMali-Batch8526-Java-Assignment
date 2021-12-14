@@ -196,6 +196,27 @@ Expected Output:
 Input first number: 25
 Binary representation of 25 is: 11001
 Number of zero bits: 2
+Ans:
+package com;
+import java.util.Scanner;
+public class BinaryNo {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.print("Input first number:");
+	int n=sc.nextInt(),count=0,a=n;
+	String s="";
+	while(a>0)
+	{
+		int r=a%2;
+		if(r==0)
+			count++;
+		s=r+s;	
+		a/=2;
+	}
+	System.out.println("Binary representation of "+n+" is:"+s+"\nNumber of zero bits:"+count);
+}
+}
+
 
 10. Write a Java program to move every positive number to the right and every negative number to the left of a given array of integers. 
 Expected Output:
