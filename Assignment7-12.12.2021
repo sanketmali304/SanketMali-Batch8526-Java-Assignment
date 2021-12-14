@@ -17,4 +17,223 @@ public class Q1 {
 	}
 }
 
-2. Write a Java program to count the number of key-value (size) mappings in a map. 
+2. Write a Java program to count the number of key-value (size) mappings in a map.
+Ans:
+//2. Write a Java program to count the number of key-value (size) mappings in a map.
+package com;
+import java.util.*;
+public class Q2 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Size of HashMap is:"+hm.size());
+	}
+}
+
+ 
+3. Write a Java program to copy all of the mappings from the specified map to another map. 
+Ans:
+//3. Write a Java program to copy all of the mappings from the specified map to another map. 
+package com;
+import java.util.*;
+public class Q3 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm1=new HashMap<String,String>();
+		hm1.put("A1", "Fox");
+		hm1.put("A2", "Zebra");
+		hm1.put("A3", "Elephant");
+		hm1.put("A4", "Lion");
+		hm1.put("A5", "Tiger");
+	HashMap<String,String> hm2=new HashMap<String,String>();
+	hm1.putAll(hm2);
+	System.out.println("Original HashMap:"+hm1);
+	}
+}
+
+4. Write a Java program to remove all of the mappings from a map. 
+Ans:
+//4. Write a Java program to remove all of the mappings from a map. 
+package com;
+import java.util.*;
+public class Q4 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap:"+hm);
+	hm.clear();
+	System.out.println("Empty HashMap:"+hm);
+	}
+}
+5. Write a Java program to check whether a map contains key-value mappings (empty) or not. 
+Ans:
+//5. Write a Java program to check whether a map contains key-value mappings (empty) or not. 
+package com;
+import java.util.*;
+public class Q5 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	boolean r=hm.isEmpty();
+	System.out.println("HashMap is Empty:"+r);
+	}
+}
+
+6. Write a Java program to get a shallow copy of a HashMap instance. 
+Ans:
+//6. Write a Java program to get a shallow copy of a HashMap instance.  
+package com;
+import java.util.*;
+public class Q6 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap is:"+hm);
+	HashMap<String,String> new_hm=new HashMap<String,String>();
+	new_hm=(HashMap)hm.clone();
+	System.out.println("Clone HashMap is:"+new_hm);
+	}
+}
+
+7. Write a Java program to test if a map contains a mapping for the specified key. 
+Ans:
+//7. Write a Java program to test if a map contains a mapping for the specifsied key. 
+package com;
+import java.util.*;
+public class Q7 {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap is:"+hm);
+	System.out.print("Enter key for a check:");
+	String s=sc.nextLine();
+	System.out.print("Key Is exist:");
+	if(hm.containsKey(s))
+		System.out.print(" Yes..!");
+	else
+		System.out.print(" No..!");
+	}
+}
+
+8. Write a Java program to test if a map contains a mapping for the specified value. 
+Ans:
+//7. Write a Java program to test if a map contains a mapping for the specified value.
+package com;
+import java.util.*;
+public class Q7 {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap is:"+hm);
+	System.out.print("Enter Value for a check:");
+	String s=sc.nextLine();
+	System.out.print("Value Is exist:");
+	if(hm.containsValue(s))
+		System.out.print(" Yes..!");
+	else
+		System.out.print(" No..!");
+	}
+}
+
+9. Write a Java program to create a set view of the mappings contained in a map. 
+Ans:
+//9. Write a Java program to create a set view of the mappings contained in a map. 
+package com;
+import java.util.*;
+public class Q9 {
+	public static void main(String[] args) {
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap is:"+hm);
+	Set st=hm.entrySet();
+	System.out.println("Set Values:"+st);
+	}
+}
+
+10. Write a Java program to get the value of a specified key in a map. 
+Ans
+//10. Write a Java program to get the value of a specified key in a map. 
+package com;
+import java.util.*;
+public class Q10 {
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	HashMap<String,String> hm=new HashMap<String,String>();
+		hm.put("A1", "Fox");
+		hm.put("A2", "Zebra");
+		hm.put("A3", "Elephant");
+		hm.put("A4", "Lion");
+		hm.put("A5", "Tiger");
+	System.out.println("Original HashMap is:"+hm);
+	System.out.print("Enter a Key:");
+	String s=sc.nextLine();
+	System.out.println("Value is:"+(String)hm.get(s));
+	}
+}
+
+11. Write a Java program to get a set view of the keys contained in this map. 
+Ans:
+//11. Write a Java program to get a set view of the keys contained in this map. 
+package com;
+import java.util.*;
+public class Q11 {
+	public static void main(String[] args) {
+		HashMap<String,String> hm=new HashMap<String,String>();
+			hm.put("A1", "Fox");
+			hm.put("A2", "Zebra");
+			hm.put("A3", "Elephant");
+			hm.put("A4", "Lion");
+			hm.put("A5", "Tiger");
+		System.out.println("Original HashMap is:"+hm);
+		Set st=hm.keySet();
+		System.out.println("HashMap key set is:"+st);
+	}
+}
+
+12. Write a Java program to get a collection view of the values contained in this map. 
+Ans
+//12. Write a Java program to get a collection view of the values contained in this map. 
+package com;
+import java.util.*;
+public class Q12 {
+	public static void main(String[] args) {
+		HashMap<String,String> hm=new HashMap<String,String>();
+			hm.put("A1", "Fox");
+			hm.put("A2", "Zebra");
+			hm.put("A3", "Elephant");
+			hm.put("A4", "Lion");
+			hm.put("A5", "Tiger");
+		System.out.println("Original HashMap is:"+hm);
+		System.out.println("Collection View of Values is:"+hm.values());
+	}
+}
+
