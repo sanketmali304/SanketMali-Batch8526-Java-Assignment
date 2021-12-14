@@ -126,9 +126,84 @@ public class Q6 {
 	}
 }
 
+
 7. Write a Java program to sort keys in Tree Map by using comparator. 
 Ans:
+//7. Write a Java program to sort keys in Tree Map by using comparator. 
+package com;
+import java.util.*;
+class Sort_k implements Comparator<String>{
+@Override
+public int compare(String str1,String str2)
+		{return str1.compareTo(str2);}
+}
+public class Q7 {
+	public static void main(String[] args) {
+		TreeMap<String,String> tm=new TreeMap<String,String>(new Sort_k());
+		tm.put("P3","Java");
+		tm.put("P1","C");
+		tm.put("P2","C++");
+		tm.put("P4","Python");
+	System.out.println("Tree Map:"+tm);
+	System.out.println("Sort Keys TreeMap:"+tm);
+	}
+}
+
 8. Write a Java program to get a key-value mapping associated with the greatest key and the least key in a map. 
+Ans:
+//8. Write a Java program to get a key-value mapping associated with the greatest key and the least key in a map.
+package com;
+import java.util.*;
+public class Q8 {
+	public static void main(String[] args) {
+		TreeMap<String,String> tm=new TreeMap<String,String>();
+		tm.put("A2", "India");
+		tm.put("A5", "Japan");
+		tm.put("A1", "America");
+		tm.put("A3", "Englend");
+		tm.put("A4", "China");
+		System.out.println("Original TreeMap:"+tm
+				+ "\nGreatest Key:"+tm.firstEntry()
+				+ "\nLeast Key:"+tm.lastEntry()
+				);
+	}
+}
+
 9. Write a Java program to get the first (lowest) key and the last (highest) key currently in a map. 
-10. Write a Java program to get a reverse order view of the keys contained in a given map. 
+Ans:
+//9. Write a Java program to get the first (lowest) key and the last (highest) key currently in a map. 
+package com;
+import java.util.*;
+public class Q9 {
+	public static void main(String[] args) {
+	TreeMap<String,String> tm=new TreeMap<String,String>();
+		tm.put("A2", "India");
+		tm.put("A5", "Japan");
+		tm.put("A1", "America");
+		tm.put("A3", "Englend");
+		tm.put("A4", "China");
+	System.out.println("Original TreeMap:"+tm
+			+"\nLowest Key:"+tm.firstKey()
+			+"\nHight Key:"+tm.lastKey());	
+	}
+}
+
+10. Write a Java program to get a reverse order view of the keys contained in a given map.
+Ans: 
+//10. Write a Java program to get a reverse order view of the keys contained in a given map.
+package com;
+import java.util.*;
+public class Q10 {
+	public static void main(String[] args) {
+	TreeMap<String,String> tm=new TreeMap<String,String>();
+		tm.put("B1", "Hero Honda");
+		tm.put("B4", "Discover");
+		tm.put("B5", "Platina");
+		tm.put("B3", "TVS");
+		tm.put("B2", "Suzuki");
+	System.out.println("Original TreeMap:"+tm
+			+"\nReverse Order Keys:"+tm.descendingKeySet());
+	}
+}
+
 
