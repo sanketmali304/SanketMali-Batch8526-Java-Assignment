@@ -1,0 +1,125 @@
+1. Write Java program to read input from java console. 
+Ans:
+package com;
+import java.io.*;
+public class Q1 {
+	public static void main(String[] args)throws IOException {
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	System.out.print("Enter A String:");
+	String s=br.readLine();
+	System.out.println("You entered string is:"+s);
+	}
+}
+
+
+2. Write a Java program to get file size in bytes, kb, mb. 
+Ans:
+package com;
+import java.io.File;
+public class Q2 {
+public static void main(String[] args) {
+	File f = new File("C:\\Users\\SANKET\\eclipse-workspace\\Assignment5\\src\\com/Demo.txt");
+	double b=f.length();
+	double k=b/1024;
+	double m=b/(1024*1024);
+	if(f.exists())
+		{
+		System.out.println("File Size In Bytes:"+b+" bytes");
+		System.out.println("File Size In KB:"+k+" kb");
+		System.out.println("File Size In MB:"+m+" mb");
+		}
+	else
+		{
+		System.out.println("File dosen't exist...!");
+		}
+	}
+}
+
+
+3. Write a Java program to read contents from a file into byte array. 
+Ans:
+
+4. Write a Java program to read a file content line by line. 
+Ans:
+//4. Write a Java program to read a file content line by line.
+package com;
+import java.io.*;
+public class Q4 {
+public static void main(String[] args) throws IOException {
+	BufferedReader br=null;
+	String s="";
+	try 
+	{
+	br=new BufferedReader(new FileReader("C:\\Users\\SANKET\\eclipse-workspace\\Assignment5\\src\\com/Demo.txt"));
+	while((s=br.readLine())!=null)
+		System.out.println(s);
+	}
+	catch(FileNotFoundException e)
+	{System.out.println("Exception"+e);}
+}
+}
+
+
+5. Write a Java program to read a plain text file. 
+6. Write a java program to read a file line by line and store it into a variable. 
+7. Write a Java program to store text file content line by line into an array. 
+8. Write a Java program to write and read a plain text file. 
+Ans:
+//8. Write a Java program to write and read a plain text file. 
+package com;
+import java.io.*;
+public class Q8{
+public static void main(String[] args)throws IOException {
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	try{
+		FileOutputStream fout= new FileOutputStream("C:\\Users\\SANKET\\eclipse-workspace\\Assignment5\\src\\com/wrtreadFile.txt");
+		System.out.println("Enter a String:");
+		String s=br.readLine();
+		byte []b=s.getBytes();
+		fout.write(b);
+		fout.close();
+		System.out.println("Success...!\nRead Content from File:");
+		FileInputStream fin = new FileInputStream("C:\\Users\\SANKET\\eclipse-workspace\\Assignment5\\src\\com/wrtreadFile.txt");
+		int i=0;
+		while((i=fin.read())!=-1)
+			System.out.print((char)i);
+		fin.close();
+	}catch(Exception e)
+	{System.out.println("Exception:"+e);}
+	}
+}
+
+
+9. Write a Java program to append text to an existing file. 
+
+
+10. Write a Java program to read first 3 lines from a file.
+Ans:
+
+//10. Write a Java program to read first 3 lines from a file.
+package com;
+import java.io.*;
+public class Q10 {
+public static void main(String[] args) throws IOException {
+	BufferedReader br=null;
+	String s="";
+	int c=0;
+	try 
+	{
+	br=new BufferedReader(new FileReader("C:\\Users\\SANKET\\eclipse-workspace\\Assignment5\\src\\com/Filefor3lines.txt"));
+	while((s=br.readLine())!=null)
+		{	
+		System.out.println(s);
+		c++;
+		if(c==3)
+			break;
+		}
+	}
+	catch(FileNotFoundException e)
+	{System.out.println("Exception"+e);}
+}
+}
+
+
+
+
