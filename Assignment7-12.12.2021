@@ -1,0 +1,20 @@
+1. Write a Java program to associate the specified value with the specified key in a HashMap. 
+Ans:
+//1. Write a Java program to associate the specified value with the specified key in a HashMap. 
+package com;
+import java.util.*;
+public class Q1 {
+	public static void main(String[] args){
+	HashMap<String,String> hm= new HashMap<String,String>();
+		hm.put("P1", "Ms Dhoni");
+		hm.put("P2", "Sachin");
+		hm.put("P3", "Raina");
+		hm.put("P4", "Yuvraj");
+		hm.put("P5", "Virat");
+	System.out.println("Keys |\tValues");	
+	for(Map.Entry e:hm.entrySet()) 
+		System.out.println(e.getKey()+"   =>\t"+e.getValue());
+	}
+}
+
+2. Write a Java program to count the number of key-value (size) mappings in a map. 
