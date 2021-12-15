@@ -1,0 +1,188 @@
+1.	 Java Program to Swap Two Numbers
+Ans:
+//1. Java Program to Swap Two Numbers
+package com;
+import java.util.Scanner;
+public class Q1 {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter 1st no:");
+	int a=sc.nextInt();
+	System.out.print("Enter 2nd no:");
+	int b=sc.nextInt();
+	System.out.println("Before Swaping: a="+a+" b="+b);
+	int temp=a;
+	a=b;
+	b=temp;
+	System.out.println("After Swaping: a="+a+" b="+b);
+	}
+}
+
+2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+Ans:
+//2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+package com;
+import java.util.*;
+public class Q2 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a Character:");
+		char a=sc.next().charAt(0);
+		if(a=='a'||a=='e'||a=='i'||a=='o'||a=='u'||a=='A'||a=='E'||a=='I'||a=='O'||a=='U')
+			System.out.println(a+" is a Vowel");
+		else
+			System.out.println(a+" is a Consonant");
+	sc.close();
+	}
+}
+
+
+3.	Display Fibonacci Series
+The Fibonacci series is a series where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
+
+fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+Ans:
+//3.	Display Fibonacci Series
+//The Fibonacci series is a series where the next term is the sum of the previous two terms. 
+//The first two terms of the Fibonacci sequence are 0 followed by 1.
+//fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+package com;
+public class Q3 {
+	public static void main(String[] args) {
+	int a1=0,a2=1,f;
+	System.out.print("Fibonacci Series: "+a1+", "+a2+" ,");
+	for(int i=1;i<9;i++)
+		{
+		f=a1+a2;
+		System.out.print(f+", ");
+		a1=a2;
+		a2=f;
+		}
+	}
+}
+
+4.	Find Factorial of a Number.
+Ans:
+//4.	Find Factorial of a Number
+package com;
+import java.util.Scanner;
+public class Q4 {
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.print("Enter Number:");
+	int n=sc.nextInt(),fact=1;
+	int a=n;
+	while(a>0)
+		{
+		Fact*=a;
+		a--;
+		}
+	System.out.println("Factorial of "+n+" is "+fact);
+	sc.close();
+	}
+}
+
+
+5.	Write Text‐Based Application using Object‐Oriented Approach to display your name.
+Ans:
+//5.Write Text‐Based Application using Object‐Oriented Approach to display your name.
+package com;
+class name{
+	void display(){
+		System.out.println("Sanket Mali");
+	}
+}
+public class Q5 {
+	public static void main(String[] args) {
+		name n = new name();
+		n.display();
+	}
+}
+
+6. Create a class called Employee that includes three pieces of information as instance variables—a first name (typeString), a last name (typeString) and a monthly salary (double).
+Your class should have a constructor that initializes the three instance variables. Provide a set and a get method for each instance variable. 
+If the monthly salary is not positive, set it to 0.0. Write a test application named EmployeeTest that demonstrates class Employee’s capabilities. 
+Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10% raise and display each Employee’s yearly salary again. 
+Ans:
+package com;
+class Employee{
+	private String fname;
+	private String lname;
+	private double salary; 
+	Employee(){
+		fname=null;
+		lname=null;
+		salary=0.0;
+	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		if(salary<0)
+			this.salary=0.0;
+		else 
+			this.salary=salary*12;
+	}
+		
+}
+public class EmployeeTest{
+	public static void main(String[] args) {
+	Employee e1 = new Employee();
+	e1.setFname("Sanket");
+	e1.setLname("Mali");
+	e1.setSalary(35000);
+	
+	Employee e2 = new Employee();
+	e2.setFname("Akash");
+	e2.setLname("Kanade");
+	e2.setSalary(30000);
+	
+	System.out.println("Details of 1st Employee"
+			+"\nName:"+e1.getFname()+" "+e1.getLname()
+			+"\nYearly Salary:"+e1.getSalary());
+	System.out.println("\nDetails of 2nd Employee"
+			+"\nName:"+e2.getFname()+" "+e2.getLname()
+			+"\nYearly Salary:"+e2.getSalary());
+	
+	System.out.println("\nAfter 10% raise  salary\nDetails of 1st Employee"
+			+"\nName:"+e1.getFname()+" "+e1.getLname()
+			+"\nYearly Salary:"+e1.getSalary()*1.1);
+	System.out.println("\nDetails of 2nd Employee"
+			+"\nName:"+e2.getFname()+" "+e2.getLname()
+			+"\nYearly Salary:"+e2.getSalary()*1.1);
+	}
+}
+7.	Create a class called Date that includes three pieces of information as instance variables—a month (typeint), a day (typeint) and a year (typeint). Your class should have a constructor that initializes the three instance variables and assumes that the values provided are correct. Provide a set and a get method for each instance variable. Provide a method displayDate that displays the month, day and year separated by forward slashes(/). Write a test application named DateTest that demonstrates classDate’s capabilities.
+
+8.	Write an application that displays the numbers 1 to 4 on the same line, with each pair of adjacent numbers separated by one space. Write the application using the following techniques:   a. Use one System.out.println statement.   b. Use four System.out.print statements.   c. Use one System. out. printf statement.
+
+Ans:
+//8.	Write an application that displays the numbers 1 to 4 on the same line, with each pair of 
+//adjacent numbers separated by one space. Write the application using the following techniques:   
+//	a. Use one System.out.println statement.
+//	b. Use four System.out.print statements.
+//	c. Use one System. out. printf statement.
+package com;
+public class Q8 {
+	public static void main(String[] args) {
+		System.out.println("1 2 3 4");
+		System.out.print("1 2 3 4");
+		System.out.print("\n");
+		System.out.printf("%d %d %d %d",1,2,3,4); 
+	}
+}
+
+
+9.	Write an application that inputs three integers from the user and displays the sum, average, product, smallest and largest of the numbers.
