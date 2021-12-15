@@ -1,4 +1,4 @@
-1.	 Java Program to Swap Two Numbers
+1. Java Program to Swap Two Numbers
 Ans:
 //1. Java Program to Swap Two Numbers
 package com;
@@ -18,9 +18,9 @@ public class Q1 {
 	}
 }
 
-2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+2.Java Program to Check Whether an Alphabet is Vowel or Consonant.
 Ans:
-//2.	Java Program to Check Whether an Alphabet is Vowel or Consonant.
+//2.Java Program to Check Whether an Alphabet is Vowel or Consonant.
 package com;
 import java.util.*;
 public class Q2 {
@@ -37,12 +37,11 @@ public class Q2 {
 }
 
 
-3.	Display Fibonacci Series
+3.Display Fibonacci Series
 The Fibonacci series is a series where the next term is the sum of the previous two terms. The first two terms of the Fibonacci sequence are 0 followed by 1.
-
 fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 Ans:
-//3.	Display Fibonacci Series
+//3.Display Fibonacci Series
 //The Fibonacci series is a series where the next term is the sum of the previous two terms. 
 //The first two terms of the Fibonacci sequence are 0 followed by 1.
 //fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
@@ -61,9 +60,9 @@ public class Q3 {
 	}
 }
 
-4.	Find Factorial of a Number.
+4.Find Factorial of a Number.
 Ans:
-//4.	Find Factorial of a Number
+//4.Find Factorial of a Number
 package com;
 import java.util.Scanner;
 public class Q4 {
@@ -83,7 +82,7 @@ public class Q4 {
 }
 
 
-5.	Write Text‐Based Application using Object‐Oriented Approach to display your name.
+5.Write Text‐Based Application using Object‐Oriented Approach to display your name.
 Ans:
 //5.Write Text‐Based Application using Object‐Oriented Approach to display your name.
 package com;
@@ -99,10 +98,7 @@ public class Q5 {
 	}
 }
 
-6. Create a class called Employee that includes three pieces of information as instance variables—a first name (typeString), a last name (typeString) and a monthly salary (double).
-Your class should have a constructor that initializes the three instance variables. Provide a set and a get method for each instance variable. 
-If the monthly salary is not positive, set it to 0.0. Write a test application named EmployeeTest that demonstrates class Employee’s capabilities. 
-Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10% raise and display each Employee’s yearly salary again. 
+6.Create a class called Employee that includes three pieces of information as instance variables—a first name (typeString), a last name (typeString) and a monthly salary (double). Your class should have a constructor that initializes the three instance variables. Provide a set and a get method for each instance variable. If the monthly salary is not positive, set it to 0.0. Write a test application named EmployeeTest that demonstrates class Employee’s capabilities. Create two Employee objects and display each object’s yearly salary. Then give each Employee a 10% raise and display each Employee’s yearly salary again. 
 Ans:
 package com;
 class Employee{
@@ -164,12 +160,56 @@ public class EmployeeTest{
 			+"\nYearly Salary:"+e2.getSalary()*1.1);
 	}
 }
-7.	Create a class called Date that includes three pieces of information as instance variables—a month (typeint), a day (typeint) and a year (typeint). Your class should have a constructor that initializes the three instance variables and assumes that the values provided are correct. Provide a set and a get method for each instance variable. Provide a method displayDate that displays the month, day and year separated by forward slashes(/). Write a test application named DateTest that demonstrates classDate’s capabilities.
+7.Create a class called Date that includes three pieces of information as instance variables—a month (typeint), a day (typeint) and a year (typeint). Your class should have a constructor that initializes the three instance variables and assumes that the values provided are correct. Provide a set and a get method for each instance variable. Provide a method displayDate that displays the month, day and year separated by forward slashes(/). Write a test application named DateTest that demonstrates classDate’s capabilities.
+Ans:
+package com;
+class Date {
+	private int month;
+	private int day;
+	private int year;
+	public Date() {
+		this.month=month;
+		this.day=day;
+		this.year=year;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getDay() {
+		return day;
+	}
+	public void setDay(int day) {
+		this.day = day;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public void displayDate(){
+		System.out.printf("Date:%d/%d/%d",month,day,year);
+	}
+}
+public class DateTest {
+	public static void main(String[] args) {
+		Date d = new Date();
+		d.setDay(01);
+		d.setMonth(01);
+		d.setYear(2000);
+		d.displayDate();
+	}
+}
 
-8.	Write an application that displays the numbers 1 to 4 on the same line, with each pair of adjacent numbers separated by one space. Write the application using the following techniques:   a. Use one System.out.println statement.   b. Use four System.out.print statements.   c. Use one System. out. printf statement.
+
+
+8.Write an application that displays the numbers 1 to 4 on the same line, with each pair of adjacent numbers separated by one space. Write the application using the following techniques:   a. Use one System.out.println statement.   b. Use four System.out.print statements.   c. Use one System. out. printf statement.
 
 Ans:
-//8.	Write an application that displays the numbers 1 to 4 on the same line, with each pair of 
+//8.Write an application that displays the numbers 1 to 4 on the same line, with each pair of 
 //adjacent numbers separated by one space. Write the application using the following techniques:   
 //	a. Use one System.out.println statement.
 //	b. Use four System.out.print statements.
@@ -186,3 +226,34 @@ public class Q8 {
 
 
 9.	Write an application that inputs three integers from the user and displays the sum, average, product, smallest and largest of the numbers.
+Ans:
+//9.Write an application that inputs three integers from the user and displays the sum, 
+//average, product, smallest and largest of the numbers.
+package com;
+import java.util.Scanner;
+public class Q9 {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter 3 Integer:");
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int c=sc.nextInt();
+	int sum=a+b+c;
+	int p=a*b*c;
+	int ln=a,sn=a;
+	if(b>a)
+		ln=b;
+	if(c>a)
+		ln=c;
+	if(b<a)
+		sn=b;
+	if(c<a)
+		sn=c;
+	System.out.println("Sum is:"+sum);
+	System.out.println("Average:"+sum/3);
+	System.out.println("Product:"+p);
+	System.out.println("Smallest No:"+sn+" Largest No:"+ln);
+	}
+
+}
+
